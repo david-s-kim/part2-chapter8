@@ -23,6 +23,10 @@
         android:layout_height="wrap_content"
         />
 
+    <include
+        android:id="@+id/bottomSheetLayout"
+        layout="@layout/bottom_sheet"/>
+
 
 
 

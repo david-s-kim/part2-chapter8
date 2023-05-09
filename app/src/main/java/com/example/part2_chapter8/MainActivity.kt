@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.part2_chapter8.RestaurantListAdapter
 import com.example.part2_chapter8.SearchRepository
 import com.example.part2_chapter8.SearchResult
 import com.example.part2_chapter8.databinding.ActivityMainBinding
@@ -17,7 +18,6 @@ import com.naver.maps.map.CameraUpdate
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.overlay.Marker
-import fastcampus.part2.chapter8.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     private var isMapInit = false
 
     private var restaurantListAdapter = RestaurantListAdapter {
+        // 카메라 움직임
         collapseBottomSheet()
         moveCamera(it, 17.0)
     }
